@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#number {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #252538;
+}
+
+.card {
+    background-color: #252538;
+}
+
+
+/* Navbar Stylingac */
+.nav-link,
+.nav-link:hover {
+    color: white;
+    text-decoration: none;
+    margin: 35px 0px 25px 0px;
+}
+
+.nav-item {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+    margin-right: 10px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-item:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+
+}
+
+.nav-item:hover:after {
+    width: 100%;
+    background: white;
+
+}
+
+.col-xs-2 {
+    background: #00f;
+    color: #FFF;
+}
+
+.col-half-offset {
+    margin-left: 4.166666667%
+}
+
+
+
+.heroContent {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+#van {
+    aspect-ratio: 1 / 1;
+    height: 116px;
+}
+
+
+.heading-title {
+    color: #252538;
+    font-family: "Poppins", Sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+.list-group-item {
+    font-family: "Poppins", Sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5em;
+
+}
+
+.sub-title {
+    font-family: "Poppins", Sans-serif;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+
+#nehmen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 338px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/shutterstock_369432314.jpg');
+}
+
+#nehmen2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 338px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/shutterstock_147367526.jpg');
+}
+
+#nehmen3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/shutterstock_1730555806.jpg');
+}
+
+#nehmen4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/shutterstock_1718291926.jpg');
+}
+
+.btn-outline-danger {
+    color: white;
+    border-color: white;
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+
+    background-image: none;
+}
+
+.carousel-control-next-icon:after {
+    content: '>';
+    font-size: 55px;
+    color: red;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 55px;
+    color: red;
+}
+
+.accordion-button.collapsed {
+    background: blue
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
