@@ -155,6 +155,44 @@ footer {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/shutterstock_1718291926.jpg');
 }
 
+#nehmen5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/shutterstock_1718291926.jpg');
+}
+
+#nehmen6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/shutterstock_595018676.jpg');
+}
+#nehmen7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/shutterstock_1167113806-2.jpg');
+}
+
 .btn-outline-danger {
     color: white;
     border-color: white;
@@ -192,4 +230,64 @@ footer {
 
 .accordion-button.collapsed::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+
+
+.top-img {
+    display: block;
+
+}
+
+.thumbnail {
+    position: relative;
+    display: inline-block;
+    background-size: cover;
+    background-color: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: 800px;
+}
+
+.heading-title-taxizentrale {
+    color: #FFFFFF;
+    font-family: "Poppins", Sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: capitalize;
+
+}
+
+.heading-title-Schnell {
+    color: #FFFFFF;
+    font-family: "Poppins", Sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+
+}
+
+.elementor-button-link {
+    font-family: "Roboto", Sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+    background-color: #252538;
+    border-radius: 0px 0px 0px 0px;
+    padding: 20px 75px 20px 75px;
+    transition: 0.5s;
+}
+
+.elementor-button-link:hover {
+    color: #252538;
+    background-color:  #FFFFFF;
+    transition: 0.5s;
 }
