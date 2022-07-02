@@ -1,0 +1,999 @@
+<html lang="de-CH" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-2249981.js?sv=7"></script>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-P523TM5"></script>
+    <script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
+    <script>class RocketLazyLoadScripts { constructor() { this.triggerEvents = ["keydown", "mousedown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"], this.userEventHandler = this._triggerListener.bind(this), this.touchStartHandler = this._onTouchStart.bind(this), this.touchMoveHandler = this._onTouchMove.bind(this), this.touchEndHandler = this._onTouchEnd.bind(this), this.clickHandler = this._onClick.bind(this), this.interceptedClicks = [], window.addEventListener("pageshow", (e => { this.persisted = e.persisted })), window.addEventListener("DOMContentLoaded", (() => { this._preconnect3rdParties() })), this.delayedScripts = { normal: [], async: [], defer: [] }, this.allJQueries = [] } _addUserInteractionListener(e) { document.hidden ? e._triggerListener() : (this.triggerEvents.forEach((t => window.addEventListener(t, e.userEventHandler, { passive: !0 }))), window.addEventListener("touchstart", e.touchStartHandler, { passive: !0 }), window.addEventListener("mousedown", e.touchStartHandler), document.addEventListener("visibilitychange", e.userEventHandler)) } _removeUserInteractionListener() { this.triggerEvents.forEach((e => window.removeEventListener(e, this.userEventHandler, { passive: !0 }))), document.removeEventListener("visibilitychange", this.userEventHandler) } _onTouchStart(e) { "HTML" !== e.target.tagName && (window.addEventListener("touchend", this.touchEndHandler), window.addEventListener("mouseup", this.touchEndHandler), window.addEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.addEventListener("mousemove", this.touchMoveHandler), e.target.addEventListener("click", this.clickHandler), this._renameDOMAttribute(e.target, "onclick", "rocket-onclick")) } _onTouchMove(e) { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler), e.target.removeEventListener("click", this.clickHandler), this._renameDOMAttribute(e.target, "rocket-onclick", "onclick") } _onTouchEnd(e) { window.removeEventListener("touchend", this.touchEndHandler), window.removeEventListener("mouseup", this.touchEndHandler), window.removeEventListener("touchmove", this.touchMoveHandler, { passive: !0 }), window.removeEventListener("mousemove", this.touchMoveHandler) } _onClick(e) { e.target.removeEventListener("click", this.clickHandler), this._renameDOMAttribute(e.target, "rocket-onclick", "onclick"), this.interceptedClicks.push(e), e.preventDefault(), e.stopPropagation(), e.stopImmediatePropagation() } _replayClicks() { window.removeEventListener("touchstart", this.touchStartHandler, { passive: !0 }), window.removeEventListener("mousedown", this.touchStartHandler), this.interceptedClicks.forEach((e => { e.target.dispatchEvent(new MouseEvent("click", { view: e.view, bubbles: !0, cancelable: !0 })) })) } _renameDOMAttribute(e, t, n) { e.hasAttribute && e.hasAttribute(t) && (event.target.setAttribute(n, event.target.getAttribute(t)), event.target.removeAttribute(t)) } _triggerListener() { this._removeUserInteractionListener(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this._loadEverythingNow.bind(this)) : this._loadEverythingNow() } _preconnect3rdParties() { let e = []; document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t => { if (t.hasAttribute("src")) { const n = new URL(t.src).origin; n !== location.origin && e.push({ src: n, crossOrigin: t.crossOrigin || "module" === t.getAttribute("data-rocket-type") }) } })), e = [...new Map(e.map((e => [JSON.stringify(e), e]))).values()], this._batchInjectResourceHints(e, "preconnect") } async _loadEverythingNow() { this.lastBreath = Date.now(), this._delayEventListeners(), this._delayJQueryReady(this), this._handleDocumentWrite(), this._registerAllDelayedScripts(), this._preloadAllScripts(), await this._loadScriptsFromList(this.delayedScripts.normal), await this._loadScriptsFromList(this.delayedScripts.defer), await this._loadScriptsFromList(this.delayedScripts.async); try { await this._triggerDOMContentLoaded(), await this._triggerWindowLoad() } catch (e) { } window.dispatchEvent(new Event("rocket-allScriptsLoaded")), this._replayClicks() } _registerAllDelayedScripts() { document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e => { e.hasAttribute("src") ? e.hasAttribute("async") && !1 !== e.async ? this.delayedScripts.async.push(e) : e.hasAttribute("defer") && !1 !== e.defer || "module" === e.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(e) : this.delayedScripts.normal.push(e) : this.delayedScripts.normal.push(e) })) } async _transformScript(e) { return await this._littleBreath(), new Promise((t => { const n = document.createElement("script");[...e.attributes].forEach((e => { let t = e.nodeName; "type" !== t && ("data-rocket-type" === t && (t = "type"), n.setAttribute(t, e.nodeValue)) })), e.hasAttribute("src") ? (n.addEventListener("load", t), n.addEventListener("error", t)) : (n.text = e.text, t()); try { e.parentNode.replaceChild(n, e) } catch (e) { t() } })) } async _loadScriptsFromList(e) { const t = e.shift(); return t ? (await this._transformScript(t), this._loadScriptsFromList(e)) : Promise.resolve() } _preloadAllScripts() { this._batchInjectResourceHints([...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async], "preload") } _batchInjectResourceHints(e, t) { var n = document.createDocumentFragment(); e.forEach((e => { if (e.src) { const i = document.createElement("link"); i.href = e.src, i.rel = t, "preconnect" !== t && (i.as = "script"), e.getAttribute && "module" === e.getAttribute("data-rocket-type") && (i.crossOrigin = !0), e.crossOrigin && (i.crossOrigin = e.crossOrigin), n.appendChild(i) } })), document.head.appendChild(n) } _delayEventListeners() { let e = {}; function t(t, n) { !function (t) { function n(n) { return e[t].eventsToRewrite.indexOf(n) >= 0 ? "rocket-" + n : n } e[t] || (e[t] = { originalFunctions: { add: t.addEventListener, remove: t.removeEventListener }, eventsToRewrite: [] }, t.addEventListener = function () { arguments[0] = n(arguments[0]), e[t].originalFunctions.add.apply(t, arguments) }, t.removeEventListener = function () { arguments[0] = n(arguments[0]), e[t].originalFunctions.remove.apply(t, arguments) }) }(t), e[t].eventsToRewrite.push(n) } function n(e, t) { let n = e[t]; Object.defineProperty(e, t, { get: () => n || function () { }, set(i) { e["rocket" + t] = n = i } }) } t(document, "DOMContentLoaded"), t(window, "DOMContentLoaded"), t(window, "load"), t(window, "pageshow"), t(document, "readystatechange"), n(document, "onreadystatechange"), n(window, "onload"), n(window, "onpageshow") } _delayJQueryReady(e) { let t = window.jQuery; Object.defineProperty(window, "jQuery", { get: () => t, set(n) { if (n && n.fn && !e.allJQueries.includes(n)) { n.fn.ready = n.fn.init.prototype.ready = function (t) { e.domReadyFired ? t.bind(document)(n) : document.addEventListener("rocket-DOMContentLoaded", (() => t.bind(document)(n))) }; const t = n.fn.on; n.fn.on = n.fn.init.prototype.on = function () { if (this[0] === window) { function e(e) { return e.split(" ").map((e => "load" === e || 0 === e.indexOf("load.") ? "rocket-jquery-load" : e)).join(" ") } "string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = e(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => { delete Object.assign(arguments[0], { [e(t)]: arguments[0][t] })[t] })) } return t.apply(this, arguments), this }, e.allJQueries.push(n) } t = n } }) } async _triggerDOMContentLoaded() { this.domReadyFired = !0, await this._littleBreath(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._littleBreath(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._littleBreath(), document.dispatchEvent(new Event("rocket-readystatechange")), await this._littleBreath(), document.rocketonreadystatechange && document.rocketonreadystatechange() } async _triggerWindowLoad() { await this._littleBreath(), window.dispatchEvent(new Event("rocket-load")), await this._littleBreath(), window.rocketonload && window.rocketonload(), await this._littleBreath(), this.allJQueries.forEach((e => e(window).trigger("rocket-jquery-load"))), await this._littleBreath(); const e = new Event("rocket-pageshow"); e.persisted = this.persisted, window.dispatchEvent(e), await this._littleBreath(), window.rocketonpageshow && window.rocketonpageshow({ persisted: this.persisted }) } _handleDocumentWrite() { const e = new Map; document.write = document.writeln = function (t) { const n = document.currentScript, i = document.createRange(), r = n.parentElement; let o = e.get(n); void 0 === o && (o = n.nextSibling, e.set(n, o)); const s = document.createDocumentFragment(); i.setStart(s, 0), s.appendChild(i.createContextualFragment(t)), r.insertBefore(s, o) } } async _littleBreath() { Date.now() - this.lastBreath > 45 && (await this._requestAnimFrame(), this.lastBreath = Date.now()) } async _requestAnimFrame() { return document.hidden ? new Promise((e => setTimeout(e))) : new Promise((e => requestAnimationFrame(e))) } static run() { const e = new RocketLazyLoadScripts; e._addUserInteractionListener(e) } } RocketLazyLoadScripts.run();</script>
+
+
+    <!-- Suchmaschinen-Optimierung durch Rank Math PRO - https://s.rankmath.com/home -->
+    <title>Impressum - Taxi Zentrale Sursee</title>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap"
+        media="all" onload="this.media='all'"><noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" />
+    </noscript>
+    <link rel="stylesheet"
+        href="https://taxizentrale-sursee.ch/wp-content/cache/min/1/2f1fcadf1fc939609b97019751b2da61.css"
+        data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'"
+        onerror="this.removeAttribute('data-rocket-async')" media="all" data-minify="1">
+    <meta name="description" content="Firmenname:Taxi Zentrale Sursee Taxi Staadi GmbH">
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+    <link rel="canonical" href="https://taxizentrale-sursee.ch/impressum/">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Impressum - Taxi Zentrale Sursee">
+    <meta property="og:description" content="Firmenname:Taxi Zentrale Sursee Taxi Staadi GmbH">
+    <meta property="og:url" content="https://taxizentrale-sursee.ch/impressum/">
+    <meta property="og:site_name" content="Taxi Zentrale Sursee">
+    <meta property="og:updated_time" content="2021-05-28T14:54:41+01:00">
+    <meta property="og:image"
+        content="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372.jpg">
+    <meta property="og:image:secure_url"
+        content="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372.jpg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:alt" content="Impressum">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Impressum - Taxi Zentrale Sursee">
+    <meta name="twitter:description" content="Firmenname:Taxi Zentrale Sursee Taxi Staadi GmbH">
+    <meta name="twitter:image"
+        content="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372.jpg">
+    <meta name="twitter:label1" content="Zeit zum Lesen">
+    <meta name="twitter:data1" content="Weniger als eine Minute">
+    <!-- /Rank Math WordPress SEO Plugin -->
+
+    <link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+    <link rel="alternate" type="application/rss+xml" title="Taxi Zentrale Sursee » Feed"
+        href="https://taxizentrale-sursee.ch/feed/">
+    <link rel="alternate" type="application/rss+xml" title="Taxi Zentrale Sursee » Kommentar-Feed"
+        href="https://taxizentrale-sursee.ch/comments/feed/">
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+
+
+
+
+
+
+    <link rel="stylesheet"
+        href="https://taxizentrale-sursee.ch/wp-content/uploads/elementor/css/post-7.css?ver=1656660958"
+        data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'"
+        onerror="this.removeAttribute('data-rocket-async')" type="text/css" media="all">
+
+    <link rel="stylesheet"
+        href="https://taxizentrale-sursee.ch/wp-content/uploads/elementor/css/global.css?ver=1656660958"
+        data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'"
+        onerror="this.removeAttribute('data-rocket-async')" type="text/css" media="all">
+    <link rel="stylesheet"
+        href="https://taxizentrale-sursee.ch/wp-content/uploads/elementor/css/post-247.css?ver=1656661083"
+        data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'"
+        onerror="this.removeAttribute('data-rocket-async')" type="text/css" media="all">
+
+
+
+
+    <script type="text/javascript" src="https://taxizentrale-sursee.ch/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"
+        id="jquery-core-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2"
+        id="jquery-migrate-js" defer=""></script>
+    <script type="text/javascript" id="spbc_cookie-js-extra">
+        /* <![CDATA[ */
+        var spbcPublic = { "_ajax_nonce": "6e359e8b9e", "_rest_nonce": "3710285721", "_ajax_url": "\/wp-admin\/admin-ajax.php", "_rest_url": "https:\/\/taxizentrale-sursee.ch\/wp-json\/", "data__set_cookies": "1", "data__set_cookies__alt_sessions_type": "0" };
+/* ]]> */
+    </script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/security-malware-firewall/js/spbc-cookie.min.js?ver=2.89"
+        id="spbc_cookie-js" defer=""></script>
+    <script type="text/javascript" id="wk-tag-manager-script-js-after">
+        function shouldTrack() {
+            var trackLoggedIn = false;
+            var loggedIn = false;
+            if (!loggedIn) {
+                return true;
+            } else if (trackLoggedIn) {
+                return true;
+            }
+            return false;
+        }
+        function hasWKGoogleAnalyticsCookie() {
+            return (new RegExp('wp_wk_ga_untrack_' + document.location.hostname)).test(document.cookie);
+        }
+        if (!hasWKGoogleAnalyticsCookie() && shouldTrack()) {
+            //Google Tag Manager
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-P523TM5');
+        }
+    </script>
+    <link rel="https://api.w.org/" href="https://taxizentrale-sursee.ch/wp-json/">
+    <link rel="alternate" type="application/json" href="https://taxizentrale-sursee.ch/wp-json/wp/v2/pages/247">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://taxizentrale-sursee.ch/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+        href="https://taxizentrale-sursee.ch/wp-includes/wlwmanifest.xml">
+    <meta name="generator" content="WordPress 5.8.4">
+    <link rel="shortlink" href="https://taxizentrale-sursee.ch/?p=247">
+    <link rel="alternate" type="application/json+oembed"
+        href="https://taxizentrale-sursee.ch/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftaxizentrale-sursee.ch%2Fimpressum%2F">
+    <link rel="alternate" type="text/xml+oembed"
+        href="https://taxizentrale-sursee.ch/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftaxizentrale-sursee.ch%2Fimpressum%2F&amp;format=xml">
+    <link rel="icon"
+        href="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-Untitled-1-1-1-1-1-32x32.png"
+        sizes="32x32">
+    <link rel="icon"
+        href="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-Untitled-1-1-1-1-1-192x192.png"
+        sizes="192x192">
+    <link rel="apple-touch-icon"
+        href="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-Untitled-1-1-1-1-1-180x180.png">
+    <meta name="msapplication-TileImage"
+        content="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-Untitled-1-1-1-1-1-270x270.png">
+    <noscript>
+        <style id="rocket-lazyload-nojs-css">
+            .rll-youtube-player,
+            [data-lazy-src] {
+                display: none !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+        (function (w) {
+            "use strict"; if (!w.loadCSS) { w.loadCSS = function () { } }
+            var rp = loadCSS.relpreload = {}; rp.support = (function () {
+                var ret; try { ret = w.document.createElement("link").relList.supports("preload") } catch (e) { ret = !1 }
+                return function () { return ret }
+            })(); rp.bindMediaToggle = function (link) {
+                var finalMedia = link.media || "all"; function enableStylesheet() { link.media = finalMedia }
+                if (link.addEventListener) { link.addEventListener("load", enableStylesheet) } else if (link.attachEvent) { link.attachEvent("onload", enableStylesheet) }
+                setTimeout(function () { link.rel = "stylesheet"; link.media = "only x" }); setTimeout(enableStylesheet, 3000)
+            }; rp.poly = function () {
+                if (rp.support()) { return }
+                var links = w.document.getElementsByTagName("link"); for (var i = 0; i < links.length; i++) { var link = links[i]; if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) { link.setAttribute("data-loadcss", !0); rp.bindMediaToggle(link) } }
+            }; if (!rp.support()) { rp.poly(); var run = w.setInterval(rp.poly, 500); if (w.addEventListener) { w.addEventListener("load", function () { rp.poly(); w.clearInterval(run) }) } else if (w.attachEvent) { w.attachEvent("onload", function () { rp.poly(); w.clearInterval(run) }) } }
+            if (typeof exports !== "undefined") { exports.loadCSS = loadCSS }
+            else { w.loadCSS = loadCSS }
+        }(typeof global !== "undefined" ? global : this))
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link href="https://taxizentrale-sursee.ch/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" rel="preload"
+        as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-includes/js/dist/hooks.min.js?ver=a7edae857aab69d69fa10d5aef23a5de"
+        rel="preload" as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-includes/js/dist/i18n.min.js?ver=5f1269854226b4dd90450db411a12b79"
+        rel="preload" as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" rel="preload" as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" rel="preload"
+        as="script">
+    <link
+        href="https://taxizentrale-sursee.ch/wp-content/plugins/security-malware-firewall/js/spbc-cookie.min.js?ver=2.89"
+        rel="preload" as="script">
+    <link
+        href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1"
+        rel="preload" as="script">
+    <link
+        href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.7.2"
+        rel="preload" as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.6.6"
+        rel="preload" as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.6.6"
+        rel="preload" as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7"
+        rel="preload" as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.7.2"
+        rel="preload" as="script">
+    <link
+        href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"
+        rel="preload" as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1" rel="preload"
+        as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6"
+        rel="preload" as="script">
+    <link
+        href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.6.6"
+        rel="preload" as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.0"
+        rel="preload" as="script">
+    <link href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.6.6"
+        rel="preload" as="script">
+    <link
+        href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.7.2"
+        rel="preload" as="script">
+    <link
+        href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.6.6"
+        rel="preload" as="script">
+    <link
+        href="https://taxizentrale-sursee.ch/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.7.2"
+        rel="preload" as="script">
+    <script async="" src="https://script.hotjar.com/modules.b4253c4a74219da558ee.js" charset="utf-8"></script>
+    <style type="text/css">
+        iframe#_hjRemoteVarsFrame {
+            display: none !important;
+            width: 1px !important;
+            height: 1px !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    </style>
+    <link rel="prefetch" href="https://taxizentrale-sursee.ch/mitgleider/">
+    <link rel="prefetch" href="https://taxizentrale-sursee.ch/faq/">
+</head>
+
+<body
+    class="page-template page-template-elementor_canvas page page-id-247 wp-custom-logo elementor-default elementor-template-canvas elementor-kit-7 elementor-page elementor-page-247 e--ua-blink e--ua-edge e--ua-webkit"
+    data-elementor-device-mode="desktop">
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P523TM5" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <div data-elementor-type="wp-page" data-elementor-id="247" class="elementor elementor-247">
+        <div class="elementor-inner">
+            <div class="elementor-section-wrap">
+                <header
+                    class="elementor-section elementor-top-section elementor-element elementor-element-c674d81 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                    data-id="c674d81" data-element_type="section"
+                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" style="">
+                    <div class="elementor-container elementor-column-gap-no">
+                        <div class="elementor-row">
+                            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-73790e5"
+                                data-id="73790e5" data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-34ae2f0 elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
+                                            data-id="34ae2f0" data-element_type="widget"
+                                            data-widget_type="theme-site-logo.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-image">
+                                                    <a href="https://taxizentrale-sursee.ch">
+                                                        <img width="500" height="292"
+                                                            src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-cropped-taxizentrale-logo.png"
+                                                            class="attachment-full size-full entered lazyloaded" alt=""
+                                                            data-lazy-srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-cropped-taxizentrale-logo.png 500w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-cropped-taxizentrale-logo-300x175.png 300w"
+                                                            data-lazy-sizes="(max-width: 500px) 100vw, 500px"
+                                                            data-lazy-src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-cropped-taxizentrale-logo.png"
+                                                            data-ll-status="loaded"
+                                                            sizes="(max-width: 500px) 100vw, 500px"
+                                                            srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-cropped-taxizentrale-logo.png 500w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-cropped-taxizentrale-logo-300x175.png 300w"><noscript><img
+                                                                width="500" height="292"
+                                                                src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-cropped-taxizentrale-logo.png"
+                                                                class="attachment-full size-full" alt=""
+                                                                srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-cropped-taxizentrale-logo.png 500w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/cropped-cropped-taxizentrale-logo-300x175.png 300w"
+                                                                sizes="(max-width: 500px) 100vw, 500px" /></noscript>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-b239ade"
+                                data-id="b239ade" data-element_type="column"
+                                data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-2102db4 elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-spacer"
+                                            data-id="2102db4" data-element_type="widget"
+                                            data-widget_type="spacer.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-spacer">
+                                                    <div class="elementor-spacer-inner"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-50641d8 elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                            data-id="50641d8" data-element_type="widget"
+                                            data-widget_type="icon-list.default">
+                                            <div class="elementor-widget-container">
+                                                <ul class="elementor-icon-list-items">
+                                                    <li class="elementor-icon-list-item">
+                                                        <span class="elementor-icon-list-text">Jetzt bestellen</span>
+                                                    </li>
+                                                    <li class="elementor-icon-list-item">
+                                                        <a href="tel:041%20921%2021%2021">
+
+                                                            <span class="elementor-icon-list-icon">
+                                                                <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                                                            </span>
+                                                            <span class="elementor-icon-list-text">041 921 21 21</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-7b985e1"
+                                data-id="7b985e1" data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-e4ed439 elementor-nav-menu__align-center elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu"
+                                            data-id="e4ed439" data-element_type="widget"
+                                            data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;<i class=\&quot;fas fa-caret-down\&quot;><\/i>&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}"
+                                            data-widget_type="nav-menu.default">
+                                            <div class="elementor-widget-container">
+                                                <nav migration_allowed="1" migrated="0" role="navigation"
+                                                    class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-grow"
+                                                    style="">
+                                                    <ul id="menu-1-e4ed439" class="elementor-nav-menu"
+                                                        data-smartmenus-id="16567662450043108">
+                                                        <li
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-137">
+                                                            <a href="http://taxizentrale-sursee.ch/"
+                                                                class="elementor-item">Home</a></li>
+                                                        <li
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140">
+                                                            <a href="https://taxizentrale-sursee.ch/mitgleider/"
+                                                                class="elementor-item" style="">Mitglieder</a></li>
+                                                        <li
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141">
+                                                            <a href="https://taxizentrale-sursee.ch/preise/"
+                                                                class="elementor-item" style="">Preise</a></li>
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"
+                                                            style=""><a href="https://taxizentrale-sursee.ch/faq/"
+                                                                class="elementor-item" style="">FAQ</a></li>
+                                                        <li
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139">
+                                                            <a href="https://taxizentrale-sursee.ch/kontakt/"
+                                                                class="elementor-item">Kontakt</a></li>
+                                                    </ul>
+                                                </nav>
+                                                <div class="elementor-menu-toggle" role="button" tabindex="0"
+                                                    aria-label="Menu Toggle" aria-expanded="false" style="">
+                                                    <i aria-hidden="true" role="presentation"
+                                                        class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i
+                                                        aria-hidden="true" role="presentation"
+                                                        class="elementor-menu-toggle__icon--close eicon-close"></i>
+                                                    <span class="elementor-screen-only">Menu</span>
+                                                </div>
+                                                <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container"
+                                                    role="navigation" aria-hidden="true"
+                                                    style="width: 1263px; left: 0px; top: 60px;">
+                                                    <ul id="menu-2-e4ed439" class="elementor-nav-menu"
+                                                        data-smartmenus-id="16567662450118657">
+                                                        <li
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-137">
+                                                            <a href="http://taxizentrale-sursee.ch/"
+                                                                class="elementor-item" tabindex="-1">Home</a></li>
+                                                        <li
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140">
+                                                            <a href="https://taxizentrale-sursee.ch/mitgleider/"
+                                                                class="elementor-item" tabindex="-1">Mitglieder</a></li>
+                                                        <li
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141">
+                                                            <a href="https://taxizentrale-sursee.ch/preise/"
+                                                                class="elementor-item" tabindex="-1">Preise</a></li>
+                                                        <li
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138">
+                                                            <a href="https://taxizentrale-sursee.ch/faq/"
+                                                                class="elementor-item" tabindex="-1">FAQ</a></li>
+                                                        <li
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139">
+                                                            <a href="https://taxizentrale-sursee.ch/kontakt/"
+                                                                class="elementor-item" tabindex="-1">Kontakt</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-60478df"
+                                data-id="60478df" data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-e20abcc elementor-widget elementor-widget-image"
+                                            data-id="e20abcc" data-element_type="widget"
+                                            data-widget_type="image.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-image" style="">
+                                                    <img width="300" height="300"
+                                                        src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372-300x300.jpg"
+                                                        class="attachment-medium size-medium entered lazyloaded" alt=""
+                                                        data-lazy-srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372-300x300.jpg 300w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372-150x150.jpg 150w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372.jpg 500w"
+                                                        data-lazy-sizes="(max-width: 300px) 100vw, 300px"
+                                                        data-lazy-src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372-300x300.jpg"
+                                                        data-ll-status="loaded" sizes="(max-width: 300px) 100vw, 300px"
+                                                        srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372-300x300.jpg 300w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372-150x150.jpg 150w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372.jpg 500w"><noscript><img
+                                                            width="300" height="300"
+                                                            src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372-300x300.jpg"
+                                                            class="attachment-medium size-medium" alt=""
+                                                            srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372-300x300.jpg 300w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372-150x150.jpg 150w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_547573372.jpg 500w"
+                                                            sizes="(max-width: 300px) 100vw, 300px" /></noscript>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <section
+                    class="elementor-section elementor-top-section elementor-element elementor-element-eb73c34 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                    data-id="eb73c34" data-element_type="section" style="">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5dfb1e8"
+                                data-id="5dfb1e8" data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap" style="">
+                                        <div class="elementor-element elementor-element-5a1a5ae elementor-widget elementor-widget-heading"
+                                            data-id="5a1a5ae" data-element_type="widget"
+                                            data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h2 class="elementor-heading-title elementor-size-default" style="">
+                                                    Impressum</h2>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-fef3144 elementor-widget elementor-widget-text-editor"
+                                            data-id="fef3144" data-element_type="widget"
+                                            data-widget_type="text-editor.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-text-editor elementor-clearfix" style="">
+                                                    <p style="">Firmenname:<br>Taxi Zentrale Sursee <br>Taxi Staadi GmbH
+                                                    </p>
+                                                    <p style="">Adresse:<br>Oberstadt 4<br>CH 6210 Sursee</p>
+                                                    <p style="">Tel: +41 41 921 21 21</p>
+                                                    <p>Email: info@taxi-zentrale-sursee.ch<br>Website:
+                                                        www.taxizentrale-sursee.ch<br>Handelsregisternummer:
+                                                        CHE-170.042.004</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-e241c8a elementor-widget elementor-widget-spacer"
+                                            data-id="e241c8a" data-element_type="widget"
+                                            data-widget_type="spacer.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-spacer">
+                                                    <div class="elementor-spacer-inner"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer
+                    class="elementor-section elementor-top-section elementor-element elementor-element-6ec7371 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                    data-id="6ec7371" data-element_type="section"
+                    data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-background-overlay"></div>
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f07ccea"
+                                data-id="f07ccea" data-element_type="column">
+                                <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-element-32655d5 elementor-widget elementor-widget-spacer"
+                                            data-id="32655d5" data-element_type="widget"
+                                            data-widget_type="spacer.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-spacer">
+                                                    <div class="elementor-spacer-inner"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <section
+                                            class="elementor-section elementor-inner-section elementor-element elementor-element-fddd307 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                            data-id="fddd307" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-default">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-8789749"
+                                                        data-id="8789749" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-2d2112a elementor-widget elementor-widget-heading"
+                                                                    data-id="2d2112a" data-element_type="widget"
+                                                                    data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h4
+                                                                            class="elementor-heading-title elementor-size-default">
+                                                                            Home</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-846c5c5 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                                    data-id="846c5c5" data-element_type="widget"
+                                                                    data-widget_type="icon-list.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <ul class="elementor-icon-list-items">
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <a
+                                                                                    href="https://taxizentrale-sursee.ch/">
+
+                                                                                    <span
+                                                                                        class="elementor-icon-list-text">Warum
+                                                                                        Taxizentrale?</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-f32c08b"
+                                                        data-id="f32c08b" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-0e2c8ef elementor-widget elementor-widget-heading"
+                                                                    data-id="0e2c8ef" data-element_type="widget"
+                                                                    data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h4
+                                                                            class="elementor-heading-title elementor-size-default">
+                                                                            Angebot</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-6ee32b2 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                                    data-id="6ee32b2" data-element_type="widget"
+                                                                    data-widget_type="icon-list.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <ul class="elementor-icon-list-items">
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <a
+                                                                                    href="https://taxizentrale-sursee.ch/#taxifahrten">
+
+                                                                                    <span
+                                                                                        class="elementor-icon-list-text">Taxifahrten</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <a
+                                                                                    href="https://taxizentrale-sursee.ch/#flughafen">
+
+                                                                                    <span
+                                                                                        class="elementor-icon-list-text">Flughafentransfer</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <a
+                                                                                    href="https://taxizentrale-sursee.ch/#gruppenfahrten">
+
+                                                                                    <span
+                                                                                        class="elementor-icon-list-text">Gruppenfahrten</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <a
+                                                                                    href="https://taxizentrale-sursee.ch/#medizinische">
+
+                                                                                    <span
+                                                                                        class="elementor-icon-list-text">Medizinische
+                                                                                        Fahrten</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <a
+                                                                                    href="https://taxizentrale-sursee.ch/#kurierfahrten">
+
+                                                                                    <span
+                                                                                        class="elementor-icon-list-text">Kurierfahrten</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-1928e8f"
+                                                        data-id="1928e8f" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-4883c67 elementor-widget elementor-widget-heading"
+                                                                    data-id="4883c67" data-element_type="widget"
+                                                                    data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h4
+                                                                            class="elementor-heading-title elementor-size-default">
+                                                                            <a
+                                                                                href="https://taxizentrale-sursee.ch/mitgleider/">Mitgleider</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-c5502f2 elementor-widget elementor-widget-heading"
+                                                                    data-id="c5502f2" data-element_type="widget"
+                                                                    data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h4
+                                                                            class="elementor-heading-title elementor-size-default">
+                                                                            <a
+                                                                                href="https://taxizentrale-sursee.ch/preise/">Preise</a>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-d1105eb elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                                    data-id="d1105eb" data-element_type="widget"
+                                                                    data-widget_type="icon-list.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <ul class="elementor-icon-list-items">
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <a
+                                                                                    href="https://taxizentrale-sursee.ch/impressum/">
+
+                                                                                    <span
+                                                                                        class="elementor-icon-list-text">Impressum</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <a
+                                                                                    href="https://taxizentrale-sursee.ch/datenschutzklarung/">
+
+                                                                                    <span
+                                                                                        class="elementor-icon-list-text">Datenschutz</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-9664090"
+                                                        data-id="9664090" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-50953e2 elementor-widget elementor-widget-heading"
+                                                                    data-id="50953e2" data-element_type="widget"
+                                                                    data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h4
+                                                                            class="elementor-heading-title elementor-size-default">
+                                                                            Kontakt</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-a1db5ac elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                                                    data-id="a1db5ac" data-element_type="widget"
+                                                                    data-widget_type="icon-list.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <ul class="elementor-icon-list-items">
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <span
+                                                                                    class="elementor-icon-list-text">Oberstadt
+                                                                                    4<br>6210 Sursee </span>
+                                                                            </li>
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <a href="tel:041%20921%2021%2021">
+
+                                                                                    <span
+                                                                                        class="elementor-icon-list-text">041
+                                                                                        921 21 21</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <a
+                                                                                    href="mailto:info@taxizentrale-sursee.ch">
+
+                                                                                    <span
+                                                                                        class="elementor-icon-list-text">info@taxizentrale-sursee.ch</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="elementor-icon-list-item">
+                                                                                <a
+                                                                                    href="https://taxizentrale-sursee.ch/">
+
+                                                                                    <span
+                                                                                        class="elementor-icon-list-text">www.taxizentrale-sursee.ch</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-f56ea80"
+                                                        data-id="f56ea80" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-c74e5f2 elementor-widget elementor-widget-heading"
+                                                                    data-id="c74e5f2" data-element_type="widget"
+                                                                    data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h4
+                                                                            class="elementor-heading-title elementor-size-default">
+                                                                            Folgen Sie Uns</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-f575558 elementor-shape-circle e-grid-align-left elementor-grid-0 elementor-widget elementor-widget-social-icons"
+                                                                    data-id="f575558" data-element_type="widget"
+                                                                    data-widget_type="social-icons.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div
+                                                                            class="elementor-social-icons-wrapper elementor-grid">
+                                                                            <span class="elementor-grid-item">
+                                                                                <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-9758c9c"
+                                                                                    target="_blank">
+                                                                                    <span
+                                                                                        class="elementor-screen-only">Facebook-f</span>
+                                                                                    <i class="fab fa-facebook-f"></i>
+                                                                                </a>
+                                                                            </span>
+                                                                            <span class="elementor-grid-item">
+                                                                                <a class="elementor-icon elementor-social-icon elementor-social-icon-google elementor-repeater-item-63ae1c4"
+                                                                                    target="_blank">
+                                                                                    <span
+                                                                                        class="elementor-screen-only">Google</span>
+                                                                                    <i class="fab fa-google"></i> </a>
+                                                                            </span>
+                                                                            <span class="elementor-grid-item">
+                                                                                <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-d550229"
+                                                                                    target="_blank">
+                                                                                    <span
+                                                                                        class="elementor-screen-only">Instagram</span>
+                                                                                    <i class="fab fa-instagram"></i>
+                                                                                </a>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-9c7ee75 elementor-widget elementor-widget-image"
+                                                                    data-id="9c7ee75" data-element_type="widget"
+                                                                    data-widget_type="image.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-image">
+                                                                            <img width="558" height="40"
+                                                                                src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/Artboard-1-2.png"
+                                                                                class="attachment-large size-large entered lazyloaded"
+                                                                                alt=""
+                                                                                data-lazy-srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/Artboard-1-2.png 558w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/Artboard-1-2-300x22.png 300w"
+                                                                                data-lazy-sizes="(max-width: 558px) 100vw, 558px"
+                                                                                data-lazy-src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/Artboard-1-2.png"
+                                                                                data-ll-status="loaded"
+                                                                                sizes="(max-width: 558px) 100vw, 558px"
+                                                                                srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/Artboard-1-2.png 558w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/Artboard-1-2-300x22.png 300w"><noscript><img
+                                                                                    width="558" height="40"
+                                                                                    src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/Artboard-1-2.png"
+                                                                                    class="attachment-large size-large"
+                                                                                    alt=""
+                                                                                    srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/Artboard-1-2.png 558w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/Artboard-1-2-300x22.png 300w"
+                                                                                    sizes="(max-width: 558px) 100vw, 558px" /></noscript>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-91e389f elementor-widget elementor-widget-image"
+                                                                    data-id="91e389f" data-element_type="widget"
+                                                                    data-widget_type="image.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div class="elementor-image">
+                                                                            <img width="300" height="120"
+                                                                                src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_576692215-Converted-300x120.png"
+                                                                                class="attachment-medium size-medium entered lazyloaded"
+                                                                                alt=""
+                                                                                data-lazy-srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_576692215-Converted-300x120.png 300w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_576692215-Converted.png 500w"
+                                                                                data-lazy-sizes="(max-width: 300px) 100vw, 300px"
+                                                                                data-lazy-src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_576692215-Converted-300x120.png"
+                                                                                data-ll-status="loaded"
+                                                                                sizes="(max-width: 300px) 100vw, 300px"
+                                                                                srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_576692215-Converted-300x120.png 300w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_576692215-Converted.png 500w"><noscript><img
+                                                                                    width="300" height="120"
+                                                                                    src="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_576692215-Converted-300x120.png"
+                                                                                    class="attachment-medium size-medium"
+                                                                                    alt=""
+                                                                                    srcset="https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_576692215-Converted-300x120.png 300w, https://taxizentrale-sursee.ch/wp-content/uploads/2020/10/shutterstock_576692215-Converted.png 500w"
+                                                                                    sizes="(max-width: 300px) 100vw, 300px" /></noscript>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section
+                                            class="elementor-section elementor-inner-section elementor-element elementor-element-e9bab3c elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                            data-id="e9bab3c" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-default">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-ba5ccf8"
+                                                        data-id="ba5ccf8" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-4e317a3 elementor-widget elementor-widget-heading"
+                                                                    data-id="4e317a3" data-element_type="widget"
+                                                                    data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <p
+                                                                            class="elementor-heading-title elementor-size-default">
+                                                                            <a href="http://taxizentrale-sursee.ch/">©2021
+                                                                                Taxi Zentrale Sursee GmbH. All Rights
+                                                                                Reserved.</a></p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-c3ece06 elementor-widget elementor-widget-text-editor"
+                                                                    data-id="c3ece06" data-element_type="widget"
+                                                                    data-widget_type="text-editor.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <div
+                                                                            class="elementor-text-editor elementor-clearfix">
+                                                                            <p>Design and Marketing by<br><span
+                                                                                    style="color: #00ccff;"><a
+                                                                                        style="color: #00ccff;"
+                                                                                        href="https://expertico.ch/"
+                                                                                        rel="noopener">EXPERTICO
+                                                                                        AG</a></span></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="elementor-element elementor-element-b693227 elementor-widget elementor-widget-heading"
+                                                                    data-id="b693227" data-element_type="widget"
+                                                                    data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <p
+                                                                            class="elementor-heading-title elementor-size-default">
+                                                                            Made with <span
+                                                                                style="color: #f21a1a;">❤</span> in
+                                                                            Switzerland</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" id="rocket-browser-checker-js-after">
+        "use strict"; var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || !1, descriptor.configurable = !0, "value" in descriptor && (descriptor.writable = !0), Object.defineProperty(target, descriptor.key, descriptor) } } return function (Constructor, protoProps, staticProps) { return protoProps && defineProperties(Constructor.prototype, protoProps), staticProps && defineProperties(Constructor, staticProps), Constructor } }(); function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function") } var RocketBrowserCompatibilityChecker = function () { function RocketBrowserCompatibilityChecker(options) { _classCallCheck(this, RocketBrowserCompatibilityChecker), this.passiveSupported = !1, this._checkPassiveOption(this), this.options = !!this.passiveSupported && options } return _createClass(RocketBrowserCompatibilityChecker, [{ key: "_checkPassiveOption", value: function (self) { try { var options = { get passive() { return !(self.passiveSupported = !0) } }; window.addEventListener("test", null, options), window.removeEventListener("test", null, options) } catch (err) { self.passiveSupported = !1 } } }, { key: "initRequestIdleCallback", value: function () { !1 in window && (window.requestIdleCallback = function (cb) { var start = Date.now(); return setTimeout(function () { cb({ didTimeout: !1, timeRemaining: function () { return Math.max(0, 50 - (Date.now() - start)) } }) }, 1) }), !1 in window && (window.cancelIdleCallback = function (id) { return clearTimeout(id) }) } }, { key: "isDataSaverModeOn", value: function () { return "connection" in navigator && !0 === navigator.connection.saveData } }, { key: "supportsLinkPrefetch", value: function () { var elem = document.createElement("link"); return elem.relList && elem.relList.supports && elem.relList.supports("prefetch") && window.IntersectionObserver && "isIntersecting" in IntersectionObserverEntry.prototype } }, { key: "isSlowConnection", value: function () { return "connection" in navigator && "effectiveType" in navigator.connection && ("2g" === navigator.connection.effectiveType || "slow-2g" === navigator.connection.effectiveType) } }]), RocketBrowserCompatibilityChecker }();
+    </script>
+    <script type="text/javascript" id="rocket-preload-links-js-extra">
+        /* <![CDATA[ */
+        var RocketPreloadLinksConfig = { "excludeUris": "\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php|\/refer\/|\/go\/|\/recommend\/|\/recommends\/", "usesTrailingSlash": "1", "imageExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php", "fileExt": "jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm", "siteUrl": "https:\/\/taxizentrale-sursee.ch", "onHoverDelay": "100", "rateThrottle": "3" };
+/* ]]> */
+    </script>
+    <script type="text/javascript" id="rocket-preload-links-js-after">
+        (function () {
+            "use strict"; var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) { return typeof e } : function (e) { return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e }, e = function () { function i(e, t) { for (var n = 0; n < t.length; n++) { var i = t[n]; i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i) } } return function (e, t, n) { return t && i(e.prototype, t), n && i(e, n), e } }(); function i(e, t) { if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function") } var t = function () { function n(e, t) { i(this, n), this.browser = e, this.config = t, this.options = this.browser.options, this.prefetched = new Set, this.eventTime = null, this.threshold = 1111, this.numOnHover = 0 } return e(n, [{ key: "init", value: function () { !this.browser.supportsLinkPrefetch() || this.browser.isDataSaverModeOn() || this.browser.isSlowConnection() || (this.regex = { excludeUris: RegExp(this.config.excludeUris, "i"), images: RegExp(".(" + this.config.imageExt + ")$", "i"), fileExt: RegExp(".(" + this.config.fileExt + ")$", "i") }, this._initListeners(this)) } }, { key: "_initListeners", value: function (e) { -1 < this.config.onHoverDelay && document.addEventListener("mouseover", e.listener.bind(e), e.listenerOptions), document.addEventListener("mousedown", e.listener.bind(e), e.listenerOptions), document.addEventListener("touchstart", e.listener.bind(e), e.listenerOptions) } }, { key: "listener", value: function (e) { var t = e.target.closest("a"), n = this._prepareUrl(t); if (null !== n) switch (e.type) { case "mousedown": case "touchstart": this._addPrefetchLink(n); break; case "mouseover": this._earlyPrefetch(t, n, "mouseout") } } }, { key: "_earlyPrefetch", value: function (t, e, n) { var i = this, r = setTimeout(function () { if (r = null, 0 === i.numOnHover) setTimeout(function () { return i.numOnHover = 0 }, 1e3); else if (i.numOnHover > i.config.rateThrottle) return; i.numOnHover++, i._addPrefetchLink(e) }, this.config.onHoverDelay); t.addEventListener(n, function e() { t.removeEventListener(n, e, { passive: !0 }), null !== r && (clearTimeout(r), r = null) }, { passive: !0 }) } }, { key: "_addPrefetchLink", value: function (i) { return this.prefetched.add(i.href), new Promise(function (e, t) { var n = document.createElement("link"); n.rel = "prefetch", n.href = i.href, n.onload = e, n.onerror = t, document.head.appendChild(n) }).catch(function () { }) } }, { key: "_prepareUrl", value: function (e) { if (null === e || "object" !== (void 0 === e ? "undefined" : r(e)) || !1 in e || -1 === ["http:", "https:"].indexOf(e.protocol)) return null; var t = e.href.substring(0, this.config.siteUrl.length), n = this._getPathname(e.href, t), i = { original: e.href, protocol: e.protocol, origin: t, pathname: n, href: t + n }; return this._isLinkOk(i) ? i : null } }, { key: "_getPathname", value: function (e, t) { var n = t ? e.substring(this.config.siteUrl.length) : e; return n.startsWith("/") || (n = "/" + n), this._shouldAddTrailingSlash(n) ? n + "/" : n } }, { key: "_shouldAddTrailingSlash", value: function (e) { return this.config.usesTrailingSlash && !e.endsWith("/") && !this.regex.fileExt.test(e) } }, { key: "_isLinkOk", value: function (e) { return null !== e && "object" === (void 0 === e ? "undefined" : r(e)) && (!this.prefetched.has(e.href) && e.origin === this.config.siteUrl && -1 === e.href.indexOf("?") && -1 === e.href.indexOf("#") && !this.regex.excludeUris.test(e.href) && !this.regex.images.test(e.href)) } }], [{ key: "run", value: function () { "undefined" != typeof RocketPreloadLinksConfig && new n(new RocketBrowserCompatibilityChecker({ capture: !0, passive: !0 }), RocketPreloadLinksConfig).init() } }]), n }(); t.run();
+        }());
+    </script>
+    <script type="text/javascript" src="https://taxizentrale-sursee.ch/wp-includes/js/wp-embed.min.js?ver=5.8.4"
+        id="wp-embed-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1"
+        id="smartmenus-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.7.2"
+        id="elementor-pro-webpack-runtime-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.6.6"
+        id="elementor-webpack-runtime-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.6.6"
+        id="elementor-frontend-modules-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7"
+        id="regenerator-runtime-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
+        id="wp-polyfill-js"></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-includes/js/dist/hooks.min.js?ver=a7edae857aab69d69fa10d5aef23a5de"
+        id="wp-hooks-js"></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-includes/js/dist/i18n.min.js?ver=5f1269854226b4dd90450db411a12b79"
+        id="wp-i18n-js"></script>
+    <script type="text/javascript" id="wp-i18n-js-after">
+        wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+    </script>
+    <script type="text/javascript" id="elementor-pro-frontend-js-translations">
+        (function (domain, translations) {
+            var localeData = translations.locale_data[domain] || translations.locale_data.messages;
+            localeData[""].domain = domain;
+            wp.i18n.setLocaleData(localeData, domain);
+        })("elementor-pro", { "locale_data": { "messages": { "": {} } } });
+    </script>
+    <script type="text/javascript" id="elementor-pro-frontend-js-before">
+        var ElementorProFrontendConfig = { "ajaxurl": "https:\/\/taxizentrale-sursee.ch\/wp-admin\/admin-ajax.php", "nonce": "c50760dc9d", "urls": { "assets": "https:\/\/taxizentrale-sursee.ch\/wp-content\/plugins\/elementor-pro\/assets\/", "rest": "https:\/\/taxizentrale-sursee.ch\/wp-json\/" }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" } }, "facebook_sdk": { "lang": "de_CH", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/taxizentrale-sursee.ch\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" } };
+    </script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.7.2"
+        id="elementor-pro-frontend-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"
+        id="elementor-waypoints-js" defer=""></script>
+    <script type="text/javascript" src="https://taxizentrale-sursee.ch/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1"
+        id="jquery-ui-core-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6"
+        id="swiper-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.6.6"
+        id="share-link-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.0"
+        id="elementor-dialog-js" defer=""></script>
+    <script type="text/javascript" id="elementor-frontend-js-before">
+        var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.6.6", "is_static": false, "experimentalFeatures": { "e_import_export": true, "e_hidden_wordpress_widgets": true, "theme_builder_v2": true, "landing-pages": true, "elements-color-picker": true, "favorite-widgets": true, "admin-top-bar": true, "page-transitions": true, "notes": true, "form-submissions": true, "e_scroll_snap": true }, "urls": { "assets": "https:\/\/taxizentrale-sursee.ch\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "editorPreferences": [] }, "kit": { "body_background_background": "classic", "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 247, "title": "Impressum%20-%20Taxi%20Zentrale%20Sursee", "excerpt": "", "featuredImage": false } };
+    </script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.6.6"
+        id="elementor-frontend-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js?ver=3.7.2"
+        id="pro-preloaded-elements-handlers-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.6.6"
+        id="preloaded-modules-js" defer=""></script>
+    <script type="text/javascript"
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.7.2"
+        id="e-sticky-js" defer=""></script>
+    <script>window.lazyLoadOptions = { elements_selector: "img[data-lazy-src],.rocket-lazyload", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }; window.addEventListener('LazyLoad::Initialized', function (e) {
+            var lazyLoadInstance = e.detail.instance; if (window.MutationObserver) {
+                var observer = new MutationObserver(function (mutations) {
+                    var image_count = 0; var iframe_count = 0; var rocketlazy_count = 0; mutations.forEach(function (mutation) {
+                        for (var i = 0; i < mutation.addedNodes.length; i++) {
+                            if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') { continue }
+                            if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') { continue }
+                            images = mutation.addedNodes[i].getElementsByTagName('img'); is_image = mutation.addedNodes[i].tagName == "IMG"; iframes = mutation.addedNodes[i].getElementsByTagName('iframe'); is_iframe = mutation.addedNodes[i].tagName == "IFRAME"; rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload'); image_count += images.length; iframe_count += iframes.length; rocketlazy_count += rocket_lazy.length; if (is_image) { image_count += 1 }
+                            if (is_iframe) { iframe_count += 1 }
+                        }
+                    }); if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) { lazyLoadInstance.update() }
+                }); var b = document.getElementsByTagName("body")[0]; var config = { childList: !0, subtree: !0 }; observer.observe(b, config)
+            }
+        }, !1)</script>
+    <script data-no-minify="1" async=""
+        src="https://taxizentrale-sursee.ch/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script>
+    <script>"use strict"; function wprRemoveCPCSS() { var preload_stylesheets = document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]'); if (preload_stylesheets && 0 < preload_stylesheets.length) for (var stylesheet_index = 0; stylesheet_index < preload_stylesheets.length; stylesheet_index++) { var media = preload_stylesheets[stylesheet_index].getAttribute("media") || "all"; if (window.matchMedia(media).matches) return void setTimeout(wprRemoveCPCSS, 200) } var elem = document.getElementById("rocket-critical-css"); elem && "remove" in elem && elem.remove() } window.addEventListener ? window.addEventListener("load", wprRemoveCPCSS) : window.attachEvent && window.attachEvent("onload", wprRemoveCPCSS);</script>
+    <script>class RocketElementorAnimation { constructor() { this.deviceMode = document.createElement("span"), this.deviceMode.id = "elementor-device-mode", this.deviceMode.setAttribute("class", "elementor-screen-only"), document.body.appendChild(this.deviceMode) } _detectAnimations() { let t = getComputedStyle(this.deviceMode, ":after").content.replace(/"/g, ""); this.animationSettingKeys = this._listAnimationSettingsKeys(t), document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t => { const e = t.getBoundingClientRect(); if (e.bottom >= 0 && e.top <= window.innerHeight) try { this._animateElement(t) } catch (t) { } }) } _animateElement(t) { const e = JSON.parse(t.dataset.settings), i = e._animation_delay || e.animation_delay || 0, n = e[this.animationSettingKeys.find(t => e[t])]; if ("none" === n) return void t.classList.remove("elementor-invisible"); t.classList.remove(n), this.currentAnimation && t.classList.remove(this.currentAnimation), this.currentAnimation = n; let s = setTimeout(() => { t.classList.remove("elementor-invisible"), t.classList.add("animated", n), this._removeAnimationSettings(t, e) }, i); window.addEventListener("rocket-startLoading", function () { clearTimeout(s) }) } _listAnimationSettingsKeys(t = "mobile") { const e = [""]; switch (t) { case "mobile": e.unshift("_mobile"); case "tablet": e.unshift("_tablet"); case "desktop": e.unshift("_desktop") }const i = []; return ["animation", "_animation"].forEach(t => { e.forEach(e => { i.push(t + e) }) }), i } _removeAnimationSettings(t, e) { this._listAnimationSettingsKeys().forEach(t => delete e[t]), t.dataset.settings = JSON.stringify(e) } static run() { const t = new RocketElementorAnimation; requestAnimationFrame(t._detectAnimations.bind(t)) } } document.addEventListener("DOMContentLoaded", RocketElementorAnimation.run);</script>
+    <noscript>
+        <link rel="stylesheet"
+            href="https://taxizentrale-sursee.ch/wp-content/cache/min/1/2f1fcadf1fc939609b97019751b2da61.css"
+            media="all" data-minify="1" />
+        <link rel='stylesheet' id='elementor-post-7-css'
+            href='https://taxizentrale-sursee.ch/wp-content/uploads/elementor/css/post-7.css?ver=1656660958'
+            type='text/css' media='all' />
+        <link rel='stylesheet' id='elementor-global-css'
+            href='https://taxizentrale-sursee.ch/wp-content/uploads/elementor/css/global.css?ver=1656660958'
+            type='text/css' media='all' />
+        <link rel='stylesheet' id='elementor-post-247-css'
+            href='https://taxizentrale-sursee.ch/wp-content/uploads/elementor/css/post-247.css?ver=1656661083'
+            type='text/css' media='all' />
+    </noscript>
+
+
+</body>
+
+</html>
