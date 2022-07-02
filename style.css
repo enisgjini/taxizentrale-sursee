@@ -180,6 +180,7 @@ footer {
     background-size: cover;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/shutterstock_595018676.jpg');
 }
+
 #nehmen7 {
     display: flex;
     justify-content: center;
@@ -192,6 +193,7 @@ footer {
     background-size: cover;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/shutterstock_1167113806-2.jpg');
 }
+
 #nehmen8 {
     display: flex;
     justify-content: center;
@@ -298,8 +300,9 @@ footer {
     transition: 0.5s;
 }
 
+
 .elementor-button-link:hover {
     color: #252538;
-    background-color:  #FFFFFF;
+    background-color: #FFFFFF;
     transition: 0.5s;
 }
